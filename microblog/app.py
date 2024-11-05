@@ -13,5 +13,9 @@ def index():
 def contato():
     return render_template("contato.html", tel="(87) 988889898", nome="Joao")
 
+@app.route("/operacao/<int:num1>/<int:num2>")
+def somar_numeros(num1, num2):
+     return f"O resultado da soma é: {num1 + num2}"
+   
 if __name__ == '__main__':
     app.run()
